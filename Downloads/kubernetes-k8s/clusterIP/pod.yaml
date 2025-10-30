@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-cluster-Pod
+  labels: 
+    app: jenkins_app
+spec:
+  containers:
+    - name: CIP-POD-CON
+      image: jenkins/jenkins:latest
+      ports:
+        - name: CIP-pod-con
+          containerPort: 8080
+          protocol: TCP
+      
